@@ -1,0 +1,57 @@
+.graph {
+    background-color: var(--secondary-green);
+    clip-path: var(--secondary-clippath);
+    height: 60rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__item {
+        width: 25rem;
+        height: 35rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 3rem;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+
+        h3 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.7rem;
+            margin-top: 0;
+            line-height: 2.5rem;
+        }
+
+        img {
+            height: 5rem;
+            width: 5rem;
+        }
+
+        &--icon {
+            height: 15rem;
+            width: 15rem;
+            background: var(--hover-green);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            box-shadow: -12px 9px 57px 0px rgba(0,114,90,1);
+        }
+    }
+}
+
+@media( max-width: 975px ) {
+    .graph {
+        flex-wrap: wrap;
+        padding: 8rem 0 11rem;
+        height: auto;
+        clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+    }
+}

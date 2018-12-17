@@ -1,0 +1,21 @@
+/*-- Base Folder --*/
+
+@import "base/base";
+@import "base/variables";
+@import "base/functions";
+@import "base/keyframes";
+@import "base/mixins";
+
+
+/*-- Component Folder --*/
+
+@import "components/navagation";
+
+/*-- Layout Folder --*/
+
+@import "layout/header";
+@import "layout/thingsToDo";
+@import "layout/graph";
+@import "layout/info";
+@import "layout/timeline";
+@import "layout/footer";

@@ -1,0 +1,108 @@
+.header {
+    padding: 1px;
+
+    &__navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        transition: all .3s;
+
+        h3 {
+            color: white;
+            font-size: 2.7rem;
+            margin-left: 2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        img {
+            width: 2.5rem;
+            display: none;
+        }
+
+        img:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 2rem;
+        position: fixed;
+        right: 2rem;
+
+        a {
+            text-decoration: none;
+            font-size: 2rem;
+            color: white;
+            margin: 0 1.5rem;
+            text-transform: uppercase;
+        }
+
+        a:hover {
+            color: var(--secondary-green);
+        }
+
+        &--list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+    }
+}
+
+.active__nav {
+    background-color: #333;
+    padding: 1px;
+
+    a:hover {
+        color: darken(white, 15%);
+    }
+}
+
+
+@media( max-width: 950px ) {
+    .header {
+        &__nav {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            left: .5rem;
+            margin-top: 4rem;
+
+            &--list {
+                flex-direction: column;
+                position: absolute;
+                left: 0;
+
+                li {
+                    margin: .7rem 0;
+                }
+            }
+        }
+
+        &__navbar {
+            background-color: #333;
+            display: block;
+
+            img {
+                display: flex;
+                margin-right: 2rem;
+            }
+
+            &--mobile {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+            }
+        }
+    }
+}
+

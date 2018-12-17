@@ -1,0 +1,107 @@
+.info {
+    width: 120rem;
+    margin: auto;
+    margin: 13rem auto 10rem;
+
+    &__heading {
+        h3 {
+            color: #333;
+            font-size: 2.5rem;
+            margin-top: 1.5rem;
+            font-weight: 200;
+        }
+
+        h5 {
+            color: var(--secondary-green);
+            font-size: 1.7rem;
+            margin-bottom: 0;
+            font-weight: 600;
+        }
+
+        &--line {
+            background-color: #ccc;
+            height: .1rem;
+            width: 10rem;
+            margin-top: 5rem;
+        }
+    }
+
+    &__flex {
+        display: flex;
+
+        &--img {
+            flex: 3;
+
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        &--para {
+            flex: 1;
+
+            p {
+                font-size: 1.6rem;
+                line-height: 2.9rem;
+                color: #555;
+                margin-top: 5rem;
+                padding-right: 3rem;
+            }
+
+            button {
+                background-color: inherit;
+                color: #777;
+                font-size: 1.5rem;
+                font-weight: bold;
+                padding: 1rem 3rem;
+                border-radius: .3rem;
+                border: 1px solid #777;
+                margin-top: 1.7rem;
+            }
+
+            button:hover {
+                cursor: pointer;
+                border: 1px solid var(--secondary-green);
+                background-color: darken(#F2FCF8, 1%);
+            }
+        }
+    }
+}
+
+@media( max-width: 1245px ) {
+    .info {
+        width: 95%;
+        margin: 7rem auto 5rem;
+
+        &__flex {
+
+            &--para {
+                min-width: 20rem;
+                flex: 2;
+            }
+
+            img {
+                height: auto;
+                margin-top: 5rem;
+            }
+        }
+    }
+}
+
+@media( max-width: 980px ) {
+    .info {
+        &__flex {
+            flex-direction: column-reverse;
+        }
+    }
+}
+
+@media( max-width: 475px ) {
+    .info {
+        width: 85%;
+        button {
+            width: 100%;
+        }
+    }
+}
